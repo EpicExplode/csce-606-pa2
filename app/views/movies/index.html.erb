@@ -4,13 +4,29 @@
 
 <h1>Movies</h1>
 
-<div id="movies">
-  <% @movies.each do |movie| %>
-    <%= render movie %>
-    <p>
-      <%= link_to "Show this movie", movie %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New movie", new_movie_path %>
+<table id="movies">
+  <thead>
+    <tr>
+      <%= sort_header "title", "Title", @sort, @direction %>
+      <%= sort_header "rating", "Rating", @sort, @direction %>
+      <%= sort_header "release_date", "Release Date", @sort, @direction %>
+      <th scope="col"><span class="visually-hidden">Actions</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr id="<%= dom_id movie %>">
+        <td><%= movie.title %></td>
+        <td><%= movie.rating %></td>
+        <td><%= movie.release_date&.strftime("%b %-d, %Y") %></td>
+        <td><%= link_to "Show", movie %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3"><%= pluralize(@movies.size, "movie") %></td>
+      <td><%= link_to "New movie", new_movie_path %></td>
+    </tr>
+  </tfoot>
+</table>
