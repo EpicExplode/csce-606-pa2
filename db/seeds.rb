@@ -24,7 +24,7 @@ more_movies = [
   {:title => 'The Odyssey', :rating => 'R',
     :release_date => '17-Jul-2026'},
   {:title => 'Backrooms', :rating => 'R',
-    :release_date => '9-May-2026'}
+    :release_date => '29-May-2026'}
 ]
 
 more_movies.each do |movie|
