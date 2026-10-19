@@ -8,3 +8,104 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  background-color: #faf5f5;
+}
+
+main {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 15px;
+}
+
+h1 {
+  color: #4e0000;
+}
+
+a {
+  color: #b35600;
+}
+
+a:hover {
+  color: #c0392b;
+}
+
+.site-header {
+  background-color: #b33300;
+  padding: 12px 20px;
+  border-bottom: 3px solid #7a3b00;
+}
+
+.site-header a {
+  color: white;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.site-footer {
+  width: 85%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 10px 15px;
+  border-top: 1px dashed #aaa;
+  color: gray;
+  font-size: 13px;
+}
+
+.notice {
+  color: green;
+  font-weight: bold;
+}
+
+/* movie table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border: 1px solid #000000;
+}
+
+th {
+  background-color: #eee;
+}
+
+th, td {
+  padding: 8px 10px;
+  border: 1px solid #000000;
+  text-align: left;
+}
+
+th a {
+  color: black;
+}
+
+tbody td:first-child {
+  font-weight: bold;
+}
+
+tfoot td {
+  font-style: italic;
+}
+
+.sorted-asc {
+  background-color: lightblue;
+}
+
+.sorted-desc {
+  background-color: #ffe0b2;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

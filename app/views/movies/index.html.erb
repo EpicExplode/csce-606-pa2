@@ -1,5 +1,3 @@
-<p style="color: green"><%= notice %></p>
-
 <% content_for :title, "Movies" %>
 
 <h1>Movies</h1>
@@ -16,9 +14,9 @@
   <tbody>
     <% @movies.each do |movie| %>
       <tr id="<%= dom_id movie %>">
-        <td><%= movie.title %></td>
-        <td><%= movie.rating %></td>
-        <td><%= movie.release_date&.strftime("%b %-d, %Y") %></td>
+        <td class="<%= sort_class "title", @sort, @direction %>"><%= movie.title %></td>
+        <td class="<%= sort_class "rating", @sort, @direction %>"><%= movie.rating %></td>
+        <td class="<%= sort_class "release_date", @sort, @direction %>"><%= movie.release_date&.strftime("%b %-d, %Y") %></td>
         <td><%= link_to "Show", movie %></td>
       </tr>
     <% end %>
