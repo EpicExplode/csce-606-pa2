@@ -272,7 +272,7 @@ GEM
       ffi (~> 1.12)
       logger
     securerandom (0.4.1)
-    sqlite3 (2.9.6-x86_64-linux-gnu)
+    sqlite3 (2.10.1-x86_64-linux-gnu)
     sshkit (1.25.1)
       base64
       logger
